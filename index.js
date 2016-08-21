@@ -1,3 +1,9 @@
+function newOrder() {
+    document.getElementById('searchAndCart').style.display = 'block';
+    document.getElementById('newOrder').style.display = 'none';
+}
+
+
 var products = [];
 
 function save() {    

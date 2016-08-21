@@ -7,6 +7,9 @@
 
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/bootstrap-theme.css">
+    <link rel="stylesheet" href="index.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script src="js/bootstrap.js"></script>
 
     <script src="functions.js"></script>
@@ -14,9 +17,69 @@
 </head>
 
 <body>
-    <input type="text" id="productName" placeholder="Назва продукту" >
-    <input type="number" id="productPrice" placeholder="Ціна" >
-    <button onclick="save()" class="btn btn-warning">Зберегти</button>
+    <h1 class="text-center">Магазин</h1>
+
+    <div>
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs" role="tablist">
+            <li role="presentation" class="active">
+                <a href="#orders" aria-controls="home" role="tab" data-toggle="tab">Замовлення</a>
+            </li>
+            <li role="presentation">
+                <a href="#products" aria-controls="profile" role="tab" data-toggle="tab">Продукти</a>
+            </li>
+        </ul>
+
+        <!-- Tab panes -->
+        <div class="tab-content">
+            <div role="tabpanel" class="tab-pane active" id="orders">
+
+
+
+                <div class="text-center pad-lg" id="newOrder">
+                    <button class="btn btn-info btn-lg" onclick="newOrder()">Нове замовлення</button>
+                </div>
+
+                <div class="pad-sm" id="searchAndCart" style="display: none">
+                    <div class="container-fluid" >
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                                        Пошук
+                                    </div>
+                                    <div class="panel-body">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" placeholder="Введіть назву або ID продукту...">
+                                            <span class="input-group-btn">
+                                                <button class="btn btn-default" type="button">Пошук</button>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>                            
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>
+                                        Кошик
+                                    </div>
+                                    <div class="panel-body">
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div role="tabpanel" class="tab-pane" id="products">
+                Усі продукти
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
