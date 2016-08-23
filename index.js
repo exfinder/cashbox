@@ -1,8 +1,20 @@
 function newOrder() {
-    document.getElementById('searchAndCart').style.display = 'block';
-    document.getElementById('newOrder').style.display = 'none';
+    hide('newOrder');
+    show('searchAndCart')
 }
 
+function cancelOrder () {
+    show('newOrder');
+    hide('searchAndCart')
+}
+
+function show (id){
+    document.getElementById(id).style.display = 'block';
+}
+
+function hide (id) {
+    document.getElementById(id).style.display = 'none';
+}
 
 var products = [];
 
